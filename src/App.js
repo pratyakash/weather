@@ -6,12 +6,33 @@ import Weather from "./components/weather";
 const API_Key="573d19ee4174835f0d5e19bc9579da14";
 
 class App extends Component {
+
+  state={
+    temprature: undefined,
+    city: undefined,
+    country: undefined,
+    humidity: undefined,
+    description: undefined,
+    error: undefined
+  }
   
   getWeather= async (e)=>{
     e.preventDefault();
-    const api_call= await fetch(`http://api.openweathermap.org/data/2.5/weather?q=Manchester,uk&id=524901&APPID=573d19ee4174835f0d5e19bc9579da14&units=metric`);
-    const data= await api_call.json();
+    const city = e.target.elements.city.value;
+    const country = e.target.elements.country.value;
+
+    const api_call= await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_Key}&units=metric`);
+    const data = await api_call.json();
     console.log(data);
+
+    this.setState({
+      temprature: data.main.temp,
+      city: data.name,
+      country: data.sys.country,
+      humidity: data.main.humidity,
+      description: data.weather[0].description,
+      error: ""
+    })
   }
 
   render() {
