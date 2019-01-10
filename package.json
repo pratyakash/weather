@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://pratyakash.github.io/weather/",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "gh-pages": "^2.0.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -13,8 +14,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
