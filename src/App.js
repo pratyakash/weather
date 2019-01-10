@@ -13,7 +13,8 @@ class App extends Component {
     country: undefined,
     humidity: undefined,
     description: undefined,
-    error: undefined
+    error: undefined,
+    cod: undefined
   }
   
   getWeather= async (e)=>{
@@ -23,16 +24,32 @@ class App extends Component {
 
     const api_call= await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_Key}&units=metric`);
     const data = await api_call.json();
-    console.log(data);
+    const cod=data.cod;
 
-    this.setState({
-      temprature: data.main.temp,
-      city: data.name,
-      country: data.sys.country,
-      humidity: data.main.humidity,
-      description: data.weather[0].description,
-      error: ""
-    })
+      if(cod===200){
+        console.log(data);
+        this.setState({
+        temprature: data.main.temp,
+        city: data.name,
+        country: data.sys.country,
+        humidity: data.main.humidity,
+        description: data.weather[0].description,
+        error: ""
+      });
+
+      }
+
+      else{
+          this.setState({
+            temprature: undefined,
+            city: undefined,
+            country: undefined,
+            humidity: undefined,
+            description: undefined,
+            error: "Unable to Find the Data"
+          });
+      }
+    
   }
 
   render() {
@@ -40,7 +57,15 @@ class App extends Component {
       <div>
        <Titles />
        <Form getWeather={this.getWeather} />
-       <Weather />
+      <br></br>
+       <Weather 
+        temprature={this.state.temprature}
+        city={this.state.city}
+        country={this.state.country}
+        humidity={this.state.humididty}
+        description={this.state.description}
+        error={this.state.error} 
+        /> 
       </div>
     );
   }
