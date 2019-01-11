@@ -24,7 +24,8 @@ body {
 
 .title-container {
   height: 90vh;
-  background: url("img/back.jpg") center center no-repeat;
+  background: whitesmoke;
+  border-radius: 10px;
   background-size: cover;
   display: flex;
   align-items: center;
