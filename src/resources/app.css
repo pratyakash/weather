@@ -111,7 +111,7 @@ button:active {
 }
 
 button:hover {
-  transform: scale(1.1);
+  transform: translateY(-5px);
 }
 
 .weather__info {
@@ -130,6 +130,9 @@ button:hover {
 
 .weather__key:last-child {
   border: 0;
+}
+.weather__key:first-child {
+  margin-top: 20px;
 }
 
 .weather__value {
