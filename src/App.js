@@ -65,7 +65,7 @@ class App extends Component {
                 <div className="col-xs-7 form-container ">
                   <Form getWeather={this.getWeather} />
                   <Weather 
-                    temperature={this.state.temperature} 
+                    temperature={this.state.temprature} 
                     humidity={this.state.humidity}
                     city={this.state.city}
                     country={this.state.country}
