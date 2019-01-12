@@ -138,6 +138,7 @@ button:hover {
 .weather__value {
   color: #fff;
   font-weight: 200;
+  text-transform: capitalize;
 }
 
 .weather__error {
