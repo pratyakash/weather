@@ -102,6 +102,11 @@ button:active {
   outline: none;
 }
 
+button:hover {
+  transform: scale(.9);
+  font-weight: 400;
+}
+
 .weather__info {
   width: 60%;
   font-size: 20px;
