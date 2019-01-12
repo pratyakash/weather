@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/weather/static/media/glyphicons-halflings-regular.f4769f9b.eot"
   },
   {
-    "revision": "ae7672c0614bd6ab5259",
-    "url": "/weather/static/css/main.5392a547.chunk.css"
+    "revision": "c877a7664e392fe65528",
+    "url": "/weather/static/css/main.b827f523.chunk.css"
   },
   {
     "revision": "89889688147bd7575d6327160d64e760",
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/weather/static/js/runtime~main.177e1b72.js"
   },
   {
-    "revision": "ae7672c0614bd6ab5259",
-    "url": "/weather/static/js/main.ae7672c0.chunk.js"
+    "revision": "c877a7664e392fe65528",
+    "url": "/weather/static/js/main.c877a766.chunk.js"
   },
   {
     "revision": "448c34a56d699c29117adc64c43affeb",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/weather/static/css/1.8b374f98.chunk.css"
   },
   {
-    "revision": "99c7c28fe478f9eb27b2b01b52b5795c",
+    "revision": "756689663cc0cda8b4909985279211b3",
     "url": "/weather/index.html"
   }
 ];
