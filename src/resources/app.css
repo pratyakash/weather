@@ -96,14 +96,22 @@ button {
   background-color: #f16051;
   color: #fff;
   font-weight: 100;
+  -webkit-box-shadow: 10px 9px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 9px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 9px 5px 0px rgba(0,0,0,0.75);
+  transition: all ease 0.3s;
 }
 
 button:active {
   outline: none;
+  transform: translateY(5px);
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
 }
 
 button:hover {
-  transform: scale(.9);
+  transform: scale(1.1);
   font-weight: 400;
 }
 
