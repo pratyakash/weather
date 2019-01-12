@@ -7,7 +7,9 @@ body {
 }
 
 .wrapper {
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(224,176,27,1) 30%, rgba(224,255,0,1) 82%);
+  background: #c2e59c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -26,6 +28,7 @@ body {
   height: 90vh;
   background: whitesmoke;
   border-radius: 10px;
+  border-left: 0;
   background-size: cover;
   display: flex;
   align-items: center;
